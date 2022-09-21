@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyen_tap_cau_truc_dieu_kien_bai_2</title>
+</head>
+<body>
+<h1> Kiểm tra độ tuổi vào học lớp 10 </h1> <br>
+<input type="text" id="number">
+<button type="button" onclick="Click()">Kiểm tra</button>
+<p id="age" </p>
+
+<script>
+    function Click() {
+        let result = parseFloat(document.getElementById('number').value);
+        if (result != 16) {
+            document.getElementById('age').innerHTML="Không đủ điều kiện học lớp 10";
+        } else {
+            document.getElementById('age').innerHTML="";
+        }
+    }
+</script>
+</body>
+</html>
