@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xep_hang_hoc_luc_hoc_sinh</title>
+</head>
+<body>
+<script>
+    let a= +prompt('Điểm kiểm tra');
+    let b= +prompt('Điểm giữa kỳ');
+    let c= +prompt('Điểm cuối kỳ');
+    trungBinh= (a+b+c)/2;
+    if(trungBinh>= 8){
+        document.write("Học lực tốt");
+    } else if(trungBinh >= 6.5){
+        document.write('Học lực khá');
+    } else if(trungBinh>=5){
+        document.write('Học lực trung bình');
+    } else {
+        document.write('Học lực yếu');
+    }
+
+</script>
+</body>
+</html>

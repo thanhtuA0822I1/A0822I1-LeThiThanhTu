@@ -3,96 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>may_tinh_don_gian</title>
+    <style>
+        .taoBang {
+            border: 0.5px;
+            width: 40 px;
+        }
+        .dau {
+            width: 24px;
+        }
+    </style>
 </head>
 <body>
-<input  id="result" style="width: 140px; color: blue; text-align: right">
-<table>
+<input type="text" id="window" style="width: 110px; color: blue; text-align: right">
+<table class="taoBang">
     <tr>
-        <td> <button id="p1" type="button" onclick="1()"; style="width: 30px">1</button> </td>
-        <td> <button id="p2" type="button" onclick="2()"; style="width: 30px">2</button> </td>
-        <td> <button id="p3" type="button" onclick="3()"; style="width: 30px">3</button> </td>
-        <td> <button id="p+" type="button" onclick="Add()"; style="width: 30px">+</button> </td>
+        <td> <input type="button" onclick="nhap(1)" value="1" </input> </td>
+        <td> <input type="button" onclick="nhap(2)" value="2" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="3" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="+" </input> </td>
     </tr>
     <tr>
-        <td> <button id="p4" type="button" onclick="4()"; style="width: 30px">4</button> </td>
-        <td> <button id="p5" type="button" onclick="5()"; style="width: 30px">5</button> </td>
-        <td> <button id="p6" type="button" onclick="6()"; style="width: 30px">6</button> </td>
-        <td> <button id="p-" type="button" onclick="Sup()"; style="width: 30px">-</button> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="4" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="5" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="6" </input> </td>
+        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="-" </input> </td>
     </tr>
     <tr>
-        <td> <button id="p7" type="button" onclick="7()"; style="width: 30px">1</button> </td>
-        <td> <button id="p8" type="button" onclick="8()"; style="width: 30px">2</button> </td>
-        <td> <button id="p9" type="button" onclick="9()"; style="width: 30px">3</button> </td>
-        <td> <button id="px" type="button" onclick="Mul()"; style="width: 30px">X</button> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="7" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="8" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="9" </input> </td>
+        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="-" </input> </td>
     </tr>
     <tr>
-        <td> <button id="pc" type="button" onclick="C()"; style="width: 30px">C</button> </td>
-        <td> <button id="p0" type="button" onclick="0()"; style="width: 30px">0</button> </td>
-        <td> <button id="p=" type="button" onclick="=()"; style="width: 30px">=</button> </td>
-        <td> <button id="p/" type="button" onclick="Div()"; style="width: 30px">/</button> </td>
+        <td> <input type="button" onclick="xoa()" value="C" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="0" </input> </td>
+        <td> <input type="button" onclick="bang()" value="=" </input> </td>
+        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="/" </input> </td>
     </tr>
 </table>
 <script>
-    let num1 = +document.getElementById('p1').value;
-    let num2 = +document.getElementById('p2').value;
-    let num3 = +document.getElementById('p3').value;
-    let num4 = +document.getElementById('p4').value;
-    let num5 = +document.getElementById('p5').value;
-    let num6 = +document.getElementById('p6').value;
-    let num7 = +document.getElementById('p7').value;
-    let num8 = +document.getElementById('p8').value;
-    let num9 = +document.getElementById('p9').value;
-    switch (num1) {
-        case 1:
-            document.getElementById('result').innerHTML:"1";
-            break;
-    }
-    switch (num2) {
-            case 2:
-                document.getElementById('result').innerHTML:"2";
-                break;
-    }
-    switch (num3) {
-            case 3:
-                document.getElementById('result').innerHTML:"3";
-                break;
-    }
-    switch (num4) {
-            case 4:
-                document.getElementById('result').innerHTML:"4";
-                break;
-    }
-    switch (num5) {
-            case 5:
-                document.getElementById('result').innerHTML:"5";
-                break;
-    }
-        switch (num6) {
-            case 6:
-                document.getElementById('result').innerHTML:"6";
-                break;
-        }
-        switch (num7) {
-            case 7:
-                document.getElementById('result').innerHTML:"7";
-                break;
-        }
-        switch (num8) {
-            case 8:
-                document.getElementById('result').innerHTML:"8";
-                break;
-        }
-        switch (num9) {
-            case 9:
-                document.getElementById('result').innerHTML:"9";
-                break;
-        }
-        switch (num0) {
-            case 0:
-                document.getElementById('result').innerHTML:"0";
-                break;
-        }
-    }
+function nhap(number) {
+    document.getElementById('window').value += number;
+}
+function bang() {
+    let chuoi = document.getElementById('window').value;
+    document.getElementById('window').value = eval(chuoi);
+}
+function xoa() {
+    document.getElementById('window').value= " ";
+
+}
 </script>
 
 </body>
