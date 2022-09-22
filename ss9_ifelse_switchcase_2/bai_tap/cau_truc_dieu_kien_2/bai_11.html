@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh_thue_thu_nhap_ca_nhan</title>
+</head>
+<body>
+<script>
+    let thuNhapTinhThue = +prompt('Nhập thu nhập');
+    let t1 = 0.05*thuNhapTinhThue;
+    let t2 = 0.1*thuNhapTinhThue;
+    let t3 =0.15*thuNhapTinhThue;
+    let t4 = 0.2*thuNhapTinhThue;
+    let t5 = 0.25*thuNhapTinhThue;
+    let t6 = 0.3*thuNhapTinhThue;
+    let t7 = 0.35*thuNhapTinhThue;
+    if (thuNhapTinhThue<=5000000){
+        alert("Thuế thu nhập cá nhân là: " + t1);
+    } else if (thuNhapTinhThue<=10000000){
+        alert("Thuế thu nhập cá nhân là: " +(t2-250000));
+    } else if (thuNhapTinhThue<=18000000){
+        alert("Thuế thu nhập cá nhân là: " + (t3-750000));
+    } else if (thuNhapTinhThue<=32000000){
+        alert("Thuế thu nhập cá nhân là: " + (t4-1650000));
+    } else if (thuNhapTinhThue<=52000000){
+        alert("Thuế thu nhập cá nhân là: " + (t5-3250000));
+    } else if (thuNhapTinhThue<=80000000){
+        alert("Thuế thu nhập cá nhân là: " + (t6-5850000));
+    } else {
+        alert("Thuế thu nhập cá nhân là: " +(t7 - 9850000));
+    }
+
+
+</script>
+
+</body>
+</html>

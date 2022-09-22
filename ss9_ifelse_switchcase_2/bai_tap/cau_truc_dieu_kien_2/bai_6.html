@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giai_phuong_trinh_bac_1</title>
+</head>
+<body>
+<h2> Giải phương trình bậc nhất</h2><br>
+<p> ax + b = 0</p>
+<input type="text" name="nhập" placeholder="Nhập biến a" id="biena">
+<input type="text" placeholder="Nhập biến b" id="bienb">
+<p id="x" </p>
+<button type="button" onclick="ketqua()">Kết quả</button>
+<script>
+    function ketqua(){
+    let a = +document.getElementById('biena').value;
+    let b = +document.getElementById('bienb').value;
+    let x = -b/a
+    document.getElementById('x').innerHTML="Kết quả là x = " +x;
+    }
+</script>
+
+</body>
+</html>

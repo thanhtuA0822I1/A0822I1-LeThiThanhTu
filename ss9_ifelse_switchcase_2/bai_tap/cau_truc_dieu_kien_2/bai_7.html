@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giai_phuong_trinh_bac_2</title>
+</head>
+<body>
+<h3> Giải phương trình bậc 2: ax2+bx+c=0 </h3>
+<p> Nhập biến a:<input type="text" id="biena"> </p><br>
+<p> Nhập biến b:<input type="text" id="bienb"> </p><br>
+<p> Nhập biến c:<input type="text" id="bienc"> </p>
+<p id="x"></p>
+<button type="button" onclick="Click()">Kết quả </button>
+<script>
+    function Click() {
+        let a = +document.getElementById('biena').value;
+        let b = +document.getElementById('bienb').value;
+        let c = +document.getElementById('bienc').value;
+        let denta = b*b - (4*a*c);
+        let x1 = (-b + Math.sqrt(denta))/(2*a);
+        let x2 = (-b - Math.sqrt(denta))/(2*a);
+        let x3 = -b/(2*a);
+        if (denta>0){
+            document.getElementById('x').innerHTML='x1 ='+ x1 + ' , x2 = ' + x2;
+        } else if (denta==0) {
+            document.getElementById('x').innerHTML="x1 = x2 = " + x3;
+        } else {
+            document.getElementById('x').innerHTML="Phương trình ax2+bx+c=0 vô nghiệm";
+        }
+    }
+</script>
+</body>
+</html>
