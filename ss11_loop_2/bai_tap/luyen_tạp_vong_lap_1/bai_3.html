@@ -7,12 +7,12 @@
 <body>
 <!-- Hiển thị ra 20 số trong dãy fibonacci đầu tiên -->
 <script>
-    let n1 = 0, n2 = 1, fibonacci;
+    let n1 = 1, n2 = 1, fibonacci;
     for (let i = 0; i < 20; i++) {
         fibonacci = n1 + n2;
         n1 = n2;
         n2 = fibonacci;
-        document.write(n1+"<br>");
+        document.write(fibonacci+"<br>");
     }
 </script>
 </body>
