@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng
+
+    let array = [1,2,3,4,5,6];
+    let max = [0];
+    for (let i = 0; i < array.length; i++){
+        if ( array[i]>max){
+            max = array[i]
+        }
+    }
+    alert('Giá tri lớn nhất là: '+max)
+    let average = 0;
+    for (let j=0; j<array.length; j++){
+        average += array[j]/array.length;
+    }
+    document.write('Trung bình các phần tử trong mảng là: '+ average)
+</script>
+</body>
+</html>
