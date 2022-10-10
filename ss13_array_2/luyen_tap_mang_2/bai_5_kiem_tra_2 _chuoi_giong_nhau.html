@@ -10,12 +10,18 @@
 
     let str1 = +prompt('Nhập chuỗi 1');
     let str2 = +prompt('Nhập chuỗi 2');
-    for (let i = 0, j=0; i<str1.length, j<str2.length; i++, j++);{
-        if( i = j){
-            str1 [i] = str2 [j]}
+    let check = true;
+    for (let i = 0; i<str1.length; i++;{
+        for (j =0 ; j < str2.length; j++) {
+            if (str1[i] == str2[j]) {
+                check =  true;
+                document.write('Hai chuỗi giống nhau');
+            } if ( check == false){
+                document.write('Hai chuỗi giống nhau');
+            }
         }
-    
-    }document.write('Hai chuỗi giống nhau')
+        }
+
 
     /* let str1 = +prompt("nhập số phần tử chuỗi 1");
      let str2 = +prompt("nhập số phần tử chuỗi 2");

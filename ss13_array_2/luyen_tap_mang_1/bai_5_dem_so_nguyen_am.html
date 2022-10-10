@@ -7,16 +7,22 @@
 <body>
 <script>
     //Viết chương trình đếm số nguyên âm trong một chuỗi
-    let array = [-5,5,-4,-3,4,3,-2,2,-1,1];
-    let numbers = array[0]
-    for (let i=0; i<array.length; i++){
-        if(array[i]<0){
-            numbers = array [i];
-            document.write('Số nguyên âm: '+numbers +'<br>')
+    let str = prompt("Nhập chuỗi");
+    let vowelWord = ["u", "e", "o", "a","i","U","E","O","A","I"];
+    let count = 0;
+    for ( let i =0; i < str.length; i++){
+        for (let j =0; j<vowelWord.length; j++){
+            if ( str[i]==vowelWord[j]){
+                count++;
+            }
         }
     }
+    console.log('chuỗi =:' + str);
+    console.log('Số nguyên âm trong chuỗi = ' + count);
+
 
 
 </script>
 </body>
 </html>
+

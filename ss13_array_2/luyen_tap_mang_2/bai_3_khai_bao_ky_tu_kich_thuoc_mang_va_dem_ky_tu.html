@@ -7,9 +7,23 @@
 <body>
 <script>
     //Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.
-    //let String = [1,2,3,4,5,6];
-    String [1,2,3,4,5] ar = Str.split("[ ,.]");
-    document.write(ar.length);
+
+    let numArray = prompt('Nhập số ký tự trong mảng');
+    let array =[];
+    for ( let j = 0; j < numArray; j++){
+        array [j]=prompt('Nhập ký tự thứ ' +j)
+    }
+    let number = ['0','1','2','3','4','5','6','7','8','9'];
+    let count= 0;
+    for (let i = 0; i<array.length; i++){
+        for (let j = 0;j <number.length; j++){
+            if (array[i]==number[j]){
+                count++;
+            }
+        }
+    }
+    console.log('Số ký tự số trong mảng là: ' +count);
+    console.log('Mảng ký tự: ' + array);
 
 </script>
 </body>

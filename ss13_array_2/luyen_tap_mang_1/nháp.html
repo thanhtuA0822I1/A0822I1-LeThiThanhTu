@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <input type="text" placeholder="Nhập vào mảng ký tự" id="string" onkeyup="search_replace()">
+    <div id="result"></div>
+
 
 </head>
 <body>
@@ -31,21 +34,20 @@
     x.push(7);
     console.log(x); */
 
-    var num=window.prompt();
-    var str = num.toString();
-    var result = [str[0]];
-    for(var x=1; x<str.length; x++)
-    {
-        if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
-        {
-            result.push('-', str[x]);
+    let numArray = [5, -2, 3, -6, -16, 12,-23, 100];
+    let V =+prompt("Nhập vào số nguyên V:");
+    let count = 0;
+    for (let i = 0; i < numArray.length ; i++) {
+        if (V === numArray[i]){
+            count++;
         }
-        else
-        {
-            result.push(str[x]);
-        }
+    }if (count != 0) {
+        document.write("V is in the array");
+    }else {
+        document.write("V is not in the array");
     }
-    console.log(result.join(''));
+
+
 </script>
 </body>
 </html>
