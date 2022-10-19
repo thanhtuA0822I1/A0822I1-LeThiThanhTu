@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1
+
+    function check(a,b) {
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (b === a[i]) {
+                count++;
+            }
+        }
+        if (count == 0){
+            return -1;
+        } else {
+            return count
+        }
+    }
+    let array = prompt('Nhập chuỗi ký tự');
+    let kyTu = prompt("Nhập ký tự bất kỳ");
+   alert("số làn xuất hiện"+ check(array, kyTu));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Feet/Meters</label>
+<input id="data" type="text" placeholder="Nhập số để chuyển đổi">
+<br><br>
+<button type="button" onclick="feet()">Feet</button>
+<button type="button" onclick="meters()">Meters</button>
+<br>
+<p> Result: <span id="result"></span></p>
+<script>
+    function feet() {
+        let inPut = document.getElementById('data').value;
+        document.getElementById("result").innerHTML = 3.279 * inPut;
+    }
+
+    function meters() {
+        let inPut = document.getElementById('data').value;
+        document.getElementById("result").innerHTML = 0.305 * inPut;
+    }
+
+</script>
+
+
+</body>
+</html>
