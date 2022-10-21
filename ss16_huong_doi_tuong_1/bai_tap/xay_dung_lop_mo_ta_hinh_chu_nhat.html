@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        square(subject){
+            alert('Diện thích hình chữ nhật là: ' + subject);
+        }
+
+        perimeter(subject){
+            alert('Chu vi hình chữ nhật là: ' + subject);
+        }
+
+        getLength(){
+            return this.length;
+        }
+
+        getWidth(){
+            return this.width;
+        }
+
+        setLength(length){
+            this.length = length;
+        }
+
+        setWidth(width){
+            this.width = width;
+        }
+    }
+    let rectangle = new Rectangle(+prompt('Nhập chiều dài'),+prompt('Nhập chiều rộng'));
+    let length = rectangle.getLength();
+    let width = rectangle.getWidth();
+    rectangle.square(length*width);
+    rectangle.perimeter((length+width)*2);
+    rectangle.setLength(+prompt('Nhập lại chiều dài'));
+    rectangle.setWidth(+prompt('Nhập lại chiều rộng'));
+    alert(square);
+    alert(perimeter);
+
+
+</script>
+</body>
+</html>
